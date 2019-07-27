@@ -51,4 +51,11 @@ class Person extends Model
         'alt_phone' => ['October\Test\Models\Phone', 'key' => 'person_id']
     ];
 
+    public function filterFields($fields)
+    {
+        if ($this->name == 'walid') {
+            $fields->preferred_name->hidden = false;
+        }
+    }
+
 }

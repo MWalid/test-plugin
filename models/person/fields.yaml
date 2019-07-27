@@ -3,7 +3,7 @@
 # ===================================
 #
 #  These fields explore the use of context; the "phone" field is rendered in
-#  different ways depending on the context used by the form, passed in by 
+#  different ways depending on the context used by the form, passed in by
 #  the URL.
 # ===================================
 
@@ -12,8 +12,12 @@ fields:
         label: Name
         commentAbove: Text field, required. Given name in the first box, preferred name in the second box.
 
+
     # Testing form field with no config
     preferred_name:
+        label: Preferred Name
+        hidden: true
+        dependsOn: name
 
     # Nullable
     is_married:
